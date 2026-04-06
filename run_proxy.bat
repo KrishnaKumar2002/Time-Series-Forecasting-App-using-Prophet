@@ -5,15 +5,23 @@ cd flask_proxy
 
 if not exist .venv (
     echo Creating virtual environment...
-    python -m venv .venv
+    python -m venv --clear .venv --without-pip
     if errorlevel 1 (
         echo Failed to create venv with python, trying python3...
-        python3 -m venv .venv
+        python3 -m venv --clear .venv --without-pip
         if errorlevel 1 (
             echo Failed to create virtual environment. Please check Python installation.
             pause
             exit /b 1
         )
+    )
+    echo Installing pip in venv...
+    .venv\Scripts\python -m ensurepip --upgrade
+    if errorlevel 1 (
+        echo Failed to install pip. Trying alternative method...
+        curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+        .venv\Scripts\python get-pip.py
+        del get-pip.py
     )
 )
 
