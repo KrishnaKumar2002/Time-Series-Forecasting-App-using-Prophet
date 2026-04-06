@@ -20,8 +20,8 @@ A production-ready web application for time series forecasting using Facebook Pr
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/KrishnaKumar2002/Time-Series-Forecasting.git
-   cd Time-Series-Forecasting
+   git clone https://github.com/KrishnaKumar2002/Time-Series-Forecasting-App-using-Prophet.git
+   cd Time-Series-Forecasting-App-using-Prophet
    git checkout feature/prophet-forecasting-app
    ```
 
