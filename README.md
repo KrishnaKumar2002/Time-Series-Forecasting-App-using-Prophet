@@ -25,7 +25,14 @@ A production-ready web application for time series forecasting using Facebook Pr
    git checkout feature/prophet-forecasting-app
    ```
 
-2. **Start the FastAPI backend**:
+2. **Quick start with batch files** (Windows):
+   - Double-click `run_backend.bat` to start the FastAPI backend
+   - Double-click `run_proxy.bat` to start the Flask proxy (in a new terminal)
+   - Double-click `run_frontend.bat` to start the React frontend (in a new terminal)
+
+3. **Manual setup** (or on other platforms):
+
+   **Start the FastAPI backend**:
    ```bash
    cd backend
    python -m venv .venv
@@ -35,7 +42,7 @@ A production-ready web application for time series forecasting using Facebook Pr
    python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
    ```
 
-3. **Start the Flask proxy** (in a new terminal):
+   **Start the Flask proxy** (in a new terminal):
    ```bash
    cd flask_proxy
    python -m venv .venv
@@ -45,14 +52,14 @@ A production-ready web application for time series forecasting using Facebook Pr
    python app.py
    ```
 
-4. **Start the React frontend** (in a new terminal):
+   **Start the React frontend** (in a new terminal):
    ```bash
    cd frontend
    npm install
    npm run dev
    ```
 
-5. **Open your browser** to `http://localhost:3000` and start forecasting!
+4. **Open your browser** to `http://localhost:3000` and start forecasting!
 
 ### Testing with Sample Data
 
