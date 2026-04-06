@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - 8000:8000
+    environment:
+      - PYTHONUNBUFFERED=1
+  proxy:
+    build: ./flask_proxy
+    ports:
+      - 5000:5000
+    environment:
+      - FORECAST_API_URL=http://backend:8000/api/forecast
+    depends_on:
+      - backend

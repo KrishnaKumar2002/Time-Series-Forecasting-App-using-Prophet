@@ -1,0 +1,118 @@
+:root {
+  color-scheme: dark;
+  color: #f7f9fc;
+  background: #08111c;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #111827 0%, #0b2435 100%);
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 2.8vw, 3rem);
+}
+
+header p {
+  color: #cbd5e1;
+  margin: 0 0 24px;
+}
+
+.forecast-form,
+.forecast-result,
+.quality-report,
+.error-panel {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.forecast-form label {
+  display: block;
+  margin-bottom: 16px;
+  color: #e2e8f0;
+}
+
+.forecast-form input,
+.forecast-form select,
+.forecast-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  margin-top: 8px;
+}
+
+.forecast-form button {
+  appearance: none;
+  border: none;
+  color: white;
+  background: #2563eb;
+  padding: 14px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.checkbox-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.forecast-result table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.forecast-result th,
+.forecast-result td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #334155;
+  text-align: left;
+}
+
+.forecast-result th {
+  color: #cbd5e1;
+}
+
+.error-panel {
+  border-color: #b91c1c;
+  color: #fee2e2;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.grid-section {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .grid-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
